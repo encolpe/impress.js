@@ -60,7 +60,7 @@ table {
 
 
 body {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'Trykker', 'PT Sans', sans-serif;
     
     min-height: 740px;
 
@@ -109,7 +109,7 @@ a:hover {
     -o-box-sizing:      border-box;
     box-sizing:         border-box;
 
-    font-family: 'PT Serif', georgia, serif;
+    font-family: 'Trykker', 'PT Serif', georgia, serif;
 
     font-size: 48px;
     line-height: 1.5;
@@ -440,7 +440,7 @@ a:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
     border: 1px solid rgba(0, 0, 0, .3);
 
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Trykker', 'Open Sans', Arial, sans-serif;
 
     color: rgb(102, 102, 102);
     text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
