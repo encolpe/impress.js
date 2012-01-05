@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8" />
-    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    <title>Présentation éclair de la distribution Debian</title>
     
-    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com.">
-    <meta name="author" content="Bartek Szopka" />
+    <meta name="description" content="Présentation éclair de la distribution Debian">
+    <meta name="author" content="Encolpe DEGOUTE" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
@@ -20,66 +20,80 @@
         <p>For the best experience please use the latest <b>Chrome</b> or <b>Safari</b> browser. Firefox 10 and Internet Explorer 10 <i>should</i> also handle it.</p>
     </div>
 
-    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
-        <q>Aren't you just <b>bored</b> with all those slides-based presentations?</q>
+    <div class="step slide" data-x="0" data-y="-500" data-z="-1000">
+        <q><center><img src="openlogo-100.png"/></center></q>
+        <q><center><strong>Une base solide</strong></center></q>
     </div>
 
-    <div class="step slide" data-x="0" data-y="-1500">
-        <q>Don't you think that presentations given <strong>in modern browsers</strong> shouldn't <strong>copy the limits</strong> of 'classic' slide decks?</q>
+    <div class="step slide" data-x="0" data-y="0" data-z="-2000" data-rotate="90" data-scale="2">
+        <q><center>18 ans déjà&nbsp;!</center></q>
+        <q><center><img src="openlogo-nd-100.png"/></center></q>
     </div>
 
-    <div class="step slide" data-x="1000" data-y="-1500">
-        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    <div class="step" data-x="0" data-y="1500" data-rotate="-180">
+        <p>Le projet Debian a été officiellement fondé par Ian Murdock le 16 août 1993. À cette époque le concept même de «&nbsp;<b>distribution</b>&nbsp;» était nouveau. Ian voulait faire de Debian une distribution qui serait développée ouvertement, dans l'esprit de Linux et de GNU.</p>
+    </div>
+    
+    <div class="step" data-x="-1250" data-y="1250" data-rotate="-135">
+        <p>En plus des 1 000 développeurs et mainteneurs Debian des quatre coins du monde, on compte plus de 11 000 comptes créés sur la plateforme de collaboration Alioth.</p>
+    </div>
+    
+    <div class="step" data-x="-1500" data-y="0" data-rotate="-90">
+        <p>Cela ne prend pas en compte toutes les personnes qui contribuent par des traductions ou des rapports de bogues (et parfois même des correctifs) et tous ces utilisateurs qui en aident d'autres sur les listes de discussions, les forums et les canaux IRC.</p>
+    </div>
+    
+    <div class="step" data-x="-1250" data-y="-1250" data-rotate="-45">
+        <p>En moyenne chaque version met 24 mois à être mise à disposition et l'ancienne version stable est encore maintenue pendant 12 mois à partir de la sortie d'une nouvelle version.</p>
+    </div>
+    
+    <div class="step" data-x="0" data-y="-1500" data-rotate="0">
+        <p>Actuellement, la distribution «&nbsp;<b>stable</b>&nbsp;» de Debian est la version 6.0, nom de code Squeeze. Elle a été initialement publiée en tant que version 6.0.0 le 6 février 2011 et sa dernière mise à jour, version 6.0.3, a été publiée le 8 octobre 2011. Elle supporte 11 architectures dont 3 nouvelles.</p>
+    </div>
+    
+    <div class="step" data-x="1500" data-y="-1250" data-rotate="45">
+        <p>La branche «&nbsp;<b>unstable</b>&nbsp;» comprend actuellement plus de 35 000 paquets binaires rien que pour la seule architecture "amd64", soit plus de 44 Go de logiciels libres&nbsp;!</p>
+    </div>
+    
+    <div class="step" data-x="2000" data-y="0" data-rotate="90">
+        <p>La version 5.0.9 de Debian GNU/Linux (connue sous le nom de Lenny) a été publiée le 1er octobre 2011. À partir du 6 février 2012 cette version ne sera plus supportée. 12 architectures étaient supportées.</p>
+    </div>
+    
+    <div class="step" data-x="1750" data-y="1750" data-rotate="135">
+        <p>La prochaine version se nommera Wheezy et est actuellement en phase de test dans la branche «&nbsp;<b>testing</b>&nbsp;». Il n'y a pas de planning établie pour la suite des opérations concernant cette version.</p>
+    </div>
+    
+    <div class="step" data-x="0" data-y="2250" data-rotate="180">
+        <p>C'est la distribution de tous les records avec 11 architectures publiées et 6 en cours de développement dont 2  BSD et la fameuse <b>GNU/Hurd</b> qui ne devrait plus tarder à être publiée - merci au Duke&nbsp;!</p>
+    </div>
+    
+    <div class="step" data-x="-2000" data-y="1750" data-rotate="225">
+        <p>C'est aussi la distribution qui de par son modèle de développement est la plus utilisée comme base pour d'autres distributions : Ubuntu et toutes ses dérivées, DebianEdu, Siduction, Aptosid. Cela lui permet de bénéficier en retour d'une base de tests très importante.</p>
+    </div>
+    
+    <div class="step" data-x="-2500" data-y="0" data-rotate="270">
+        <p>Il existe de nombreuses entreprises qui maintiennent leur propre dépôts à partir des dépôts Debian pour leur propres besoins internes et ceux de clients.</p>
+    </div>
+    
+    <div class="step" data-x="-2000" data-y="-1750" data-rotate="315">
+        <p>Même si elle reste très tournée serveur et hackeur elle possède tous les outils pour être utilisée au quotidien avec l'intégration des environnements de bureau KDE, GNOME, Xfce ou LXDE et le support officiel de centaines d'éditeurs logiciels pour les architectures amd64 et i386.</p>
+    </div>
+    
+    <div class="step" data-x="0" data-y="-2500" data-rotate="360">
+        <p>Enfin, c'est celle dont qui possède la plus grande transparence avec son <a href="http://www.debian.org/social_contract">Contrat Social</a> qui n'a pas changé depuis 2004, son explication du <a href="http://www.debian.org/intro/free">Logiciel Libre</a> et son explication des <a href="http://www.debian.org/reports/patent-faq.fr.html">risques que font poser les brevets sur les distributions communautaires</a>.</p>
     </div>
 
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
-        <span class="try">then you should try</span>
-        <h1>impress.js<sup>*</sup></h1>
-        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    <div class="step slide" data-x="0" data-y="-500" data-z="-3000">
+        <q><center><img src="openlogo-100.png"/></center></q>
+        <q><center><strong>Vos questions&nbsp;?</strong></center></q>
     </div>
 
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-        <p>It's a <strong>presentation tool</strong> <br/>
-        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
-    </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-    </div>
-
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-600" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
-    </div>
-
-    <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
-        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it's</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
-        <span class="footnote">* beat that, prezi ;)</span>
-    </div>
-
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    <div id="overview" class="step" data-x="0" data-y="0" data-scale="8">
     </div>
 
 </div>
 
 <div class="hint">
+    <p>Utilisez la barre espace ou les flêches pour naviguer</p>
     <p>Use a spacebar or arrow keys to navigate</p>
 </div>
 
