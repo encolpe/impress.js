@@ -89,209 +89,202 @@
 
 <div id="impress">
 
-    <div id="title" class="step" data-x="0" data-y="0" data-z="10000" data-scame="2">
-      <h1>Ways to investigate for the future of Plone</h1>
+    <div id="title" class="step slide" data-x="0" data-y="0" data-z="10000" data-scame="2">
+      <h1>Using zc.buildout<br/>to build<br/>a site factory</h1>
       <p> </p><p> </p>
       <footnote><a href="http://encolpe.wordpress.com">Encolpe DEGOUTE</a>, <a href="http://bearstech.com">Bearstech</a></footnote>
     </div>
     
-    <div class="step" data-x="-2000" data-y="-1500" data-z="0" >
-       <p>Opensource advocate from 1996 and the president of <a href="http://www.aldil.org">ALDIL</a> since 3 years.</p>
-       <p>I worked mainly on Nuxeo CPS and Plone and I contribute on many other projects.</p>
-       <p>Now I'm at Bearstech for Plone, Django and some Hackable Device stuff.</p>
-    </div>
-    
-    <div  class="step " data-x="-2000" data-y="-750" data-z="1000">
-       <p style="color:red;">This conference may contain buzzwords and trolls.</p>
-    </div>
-    
-    <div  class="step " data-x="-2000" data-y="-750">
-       <p>I will propose conflicting ways. Take them as an inspiration.</p>
-       <p>Feel free to investigate your own ways and to propose some PLIP and GSoC.</p>
-    </div>
-    
-    <div  class="step " data-x="-2000" data-y="0">
-       <q>What's <b>Plone</b>?</q>
-       <p>It's a stack upon <b>Zope</b> and <b>CMF</b>.</p>
-    </div>
-    
-    
-    <div  class="step " data-x="-2000" data-y="0" data-z="10000">
-       <q>What's <b>Plone</b> again?</q>
-       <p>It's build with <b>Python</b> and <b>C</b> with <b>twisted</b> for <b>Zope</b> and the <b>ZODB</b>.</p>
-       <p>It's using some frameworks: <b>CMF</b>, <b>Archetypes</b>, <b>Dexterity</b>, <b>JQuery</b>, <b>KSS</b>,…</p>
-       <p>It's a <b>CMS</b> but it can be seen as a framework to build a web application.<p>
-    </div>
-    
-    
-    <div  class="step " data-x="-2000" data-y="750">
-       <q>There's so much level to improve. What can we do?</q>
-       <p>First, establishing priority:</p>
-       <ol>
-       <li>Python</li>
-       <li>Network layer (aka twisted)</li>
-       <li>Storage (aka ZODB)</li>
-       <li>Base framework (aka Zope and CMF)</li>
-       <li>External application integration</li>
-       </ol>
-    </div>
-    
-    <div  class="step " data-x="-1000" data-y="-750">
-       <h1>Python</h1>
-       <q>What's the next Python to use?</q>
-       <ul>
-         <li>CPython 2.7</li>
-         <li>CPython 3.3</li>
-         <li>Pypy</li>
-         <li>Stackless Python</li>
+    <div class="step slide" data-x="0" data-y="0" data-z="5000" >
+      <h1>Encolpe DEGOUTE</h1>
+      <ul>
+       <li>Open Source advocate from 1996 and president of <a href="http://www.aldil.org">ALDIL</a> (Lyon Free Software User Group) since 3 years.</li>
+       <li>I worked mainly on Nuxeo CPS and Plone and I contribute on many other projects on Free Culture (Brewery, Books, Translations, Trainings, Arduino, 3D Printers).</li>
+       <li>Now I'm at Bearstech for Plone, Django and some Hackable Device stuff.</li>
        </ul>
+    </div>       
+    
+    <div class="step slide" data-x="-2000" data-y="-2250" data-z="0" >
+      <h1>zc.buildout</h1>
+      <ul>
+      <li>It helps you to have a Plone installation that you can repeat as many times as needed on a project.</li>
+      <li>It's hard to build your configuration at a projects' beginning.</li>
+      </ul>
+    </div>
+    <div class="step slide" data-x="-2000" data-y="-1500" data-z="0" >
+      <h1>Zopeskel</h1>
+      <ul>
+      <li>It helps you to write the zc.buildout configuration at the projects' beginning.</li>
+      <li>But this setup is for you, not for your team and is not ready for production.</li>
+      <li>You can unify practices for your team but not for customer teams.</li>
+      <li>You want something easy to deploy in <b>Jenkins</b>. Yes, you want it!</li>
+      </ul>
     </div>
     
-    <div  class="step " data-x="-1000" data-y="0">
-       <h1>Python</h1>
-       <p>Someone to remove the <b>GIL</b>?</p>
+    <div class="step slide" data-x="-2000" data-y="-750" data-z="0" >
+      <h1>Customer stories</h1>
+      <p>Your Skel is driven by customer needs</p>
+      <ol>
+      <li>Ingeniweb</li>
+      <li>Education group with one site by formation</li>
+      <li>ENS de Lyon (UNIS service) with offical and projects sites</li>
+      </ol>
     </div>
     
-    <div  class="step " data-x="-1000" data-y="750">
-       <h1>Python</h1>
-       <p>May we need to invest more in Python development</p>
+    <div class="step slide" data-x="-2000" data-y="0" data-z="0" >
+      <h1>IngeniHosting</h1>
+      <ul>
+      <li>All was managed by some Python scripts</li>
+      <li>Always the same OS configuration</li>
+      <li>Always the same Plone version for years</li>
+      </ul>
     </div>
     
-
-    <div  class="step " data-x="0" data-y="-1500">
-       <h1>Network Layer</h1>
-       <p>Some bunch of tests show that <b>twisted</b> is more or less the worse framework in the place for that job.</p>
+    <div class="step slide" data-x="-2000" data-y="750" data-z="0" >
+      <h1>Education Group</h1>
+      <p>One Virtual Machine for each site</p>
+      <ul>
+      <li>70 sites 3 years later…</li>
+      <li>Traffic can be very low on some sites</li>
+      <li>Each time all applications are compiled and installed separately</li>
+      </ul>
     </div>
     
-    <div  class="step " data-x="0" data-y="-750">
-       <h1>Network Layer</h1>
-       <p>Synchronous vs Asynchronous</p>
-       <p>What Django or Pyramid are based on?</p>
+    <div class="step slide" data-x="-2000" data-y="1500" data-z="0" >
+      <h1>Education Group</h1>
+      <p>All is managed from zc.buildout</p>
+      <ul>
+      <li>A central <em>buildout.cfg</em> file</li>
+      <li>A subfolder for base project and applications</li>
+      <li>Another subfolder for project specific includes</li>
+      </ul>
     </div>
     
-    <div  class="step " data-x="0" data-y="0">
-       <h1>Network Layer</h1>
-       <ul>
-       <li>Gunicorn</li>
-       <li>Gevent</li>
-       <li>Tornado</li>
-       </ul>
+    <div class="step slide" data-x="-2000" data-y="2250" data-z="0" >
+      <h1>Education Group</h1>
+      <p>After 3 years we need to be more flexible</p>
+      <ul>
+      <li>Separate base configuration from addons configuration and applications</li>
+      <li>Group cache settings and features on one single server</li>
+      <li>Use share hosting for some sites</li>
+      <li>Use scalable hosting for some sites</li>
+      </ul>
     </div>
     
-    <div  class="step " data-x="0" data-y="750">
-       <h1>Network Layer</h1>
-       <p>It would be a totally new paradigm to implement in Zope (or Bluebream)</p>
+    <div class="step slide" data-x="-2000" data-y="3000" data-z="0" >
+      <h1>ENS de Lyon - UNIS</h1>
+      <p>Shared hosting</p>
+      <ul>
+      <li>All VMs and servers are differents</li>
+      <li>Always the last Debian Stable (without major release upgrade)</li>
+      <li>We want to create only configuration files for external applications</li>
+      <li>All sites don't have the same Plone version</li>
+      <li>We must manage application installation and addons in it</li>
+      </ul>
     </div>
     
-    <div  class="step" data-x="0" data-y="1500">
-       <h1>Network Layer</h1>
-       <p>It's a big work that can be done in Zope 4 or Bluebream 2</p>
+    <div class="step slide" data-x="-2000" data-y="3750" data-z="0" >
+      <h1>ENS de Lyon - UNIS</h1>
+      <p>After 2 years</p>
+      <ul>
+      <li>50 deployed sites and configured in half a day</li>
+      <li>Each plone sites reach its target with the good addons (and only them)</li>
+      <li>Nobody there knows Plone and buildout in the deep</li>
+      </ul>
     </div>
     
-    <div  class="step" data-x="1000" data-y="-1500">
-       <h1>Storage</h1>
-       <p>The <b>ZODB</b> is storing objects using the Python <b>Pickle</b> format.</p>
-       <p>It can use a simple file as storage layer (<b>FileStorage</b>) or some databases (<b>RelStorage</b>).</p>
-       <p>All transactions stay stored after their life'end until a ZODB pack.</p>
+    
+    <div class="step slide" data-x="-1000" data-y="-3000" data-z="0" >
+      <q>Then what are our use cases?</q>
+      <ul>
+      <li>We want to be able to switch applications in the same stack level
+      <ul>
+      <li>Nginx/Apache configuration</li>
+      <li>Squid/Varnish compilation and configuration</li>
+      <li>Pound/HAProxy compilation and configuration</li>
+      </ul>
+      </li>
+      <li>Have profiles</li>
+      <li>Manage KSG for addons</li>
+      </ul>
     </div>
     
-    <div  class="step" data-x="1000" data-y="-750">
-       <q>Why Pickle?</q>
-       <p>It's a Python specific format that can store binary.</p>
-       <p>Too Python centric and need some C binding the get speed (<b>cPickle</b>).</p>
+    <div class="step slide" data-x="-1000" data-y="-2250" data-z="0" >
+    <h1>Zopeskel or templeet</h1>
+    <p>See tomorrow conf on Templeet at 11h45</p>
     </div>
     
-    <div  class="step" data-x="1000" data-y="0">
-       <q>What to replace Pickle?</q>
-       <p><b>JSon</b>: Javascript centric without schema validation and some variation in binary support implementation.</p>
-       <p><b>XML</b>: originaly an eXchange format that is democratize as a store format too and it fits all needs. Do we really want it?</p>
+    
+    <div class="step slide" data-x="-1000" data-y="-1500" data-z="0" >
+    <q>zopeskel.unis What do we use to make this generic?</q>
+    <ul>
+    <li><b>extends</b> => Order is <b style="color:red">important</b></li>
+    <li><b>+=</b> => Don't mix <b>=</b> and <b>+=</b></li>
+    <li><b>&lt;&lt;</b> => It copy the content before the interpretation</li>
+    <li><b>${:<i>_buildout_section_name_</i>}</b></li> give you the current section's name</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="1000" data-y="750">
-       <q>What can we improve in the ZODB?</q>
-       <p>B-Trees: Stratified B-Trees.</p>
-       <p>Better catalog's indexes: use relational database power with RelStorage</p>
-       <p>Pack: Have a subprocess that cleanup automatically old transactions.</p>
+    <div class="step slide" data-x="-1000" data-y="-750" data-z="0" >
+    <h1>zopeskel.unis</h1>
+    <ul>
+    <li>An almost empty buildout.cfg file in the skel</li>
+    <li>Some subfolders to manage configuration (profiles, profiles/etc, profiles/modules)</li>
+    <li>Some subfolders to manage development and production (templates, patchs, src, var)</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="1000" data-y="1500">
-       <q>Can we replace the ZODB?</q>
-       <ul>
-       <li>Cassandra</li>
-       <li>MongoDB</li>
-       </ul>
+    <div class="step slide" data-x="-1000" data-y="0" data-z="0" >
+    <h1>zopeskel.unis profiles</h1>
+    <ul>
+    <li>development.cfg</li>
+    <li>standalone.cfg</li>
+    <li>preproduction.cfg</li>
+    <li>production.cfg</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="2000" data-y="-1500">
-       <h1>Base Framework</h1>
-       <q>Who tried launch <b>ZopeProfiler</b> on any Plone site?</q>
-       <p></p>
+    <div class="step slide" data-x="-1000" data-y="750" data-z="0" >
+    <h1>zopeskel.unis profiles/etc</h1>
+    <ul>
+    <li>defines.cfg</li>
+    <li>base.cfg</li>
+    <li>project.cfg</li>
+    <li>versions.cfg</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="2000" data-y="-750">
-       <q>How many layer/framework to access my data?</q>
-       <p>Use Functions is costly and recursive functions are evil!</p>
-       <p>We need to use more Zope base functions directly from our code.</p>
+    <div class="step slide" data-x="-1000" data-y="1500" data-z="0" >
+    <h1>zopeskel.unis profiles/modules</h1>
+    <ul>
+    <li>cas.cfg</li>
+    <li>ldap.cfg</li>
+    <li>getpaid.cfg</li>
+    <li>theming.cfg --> Diazo</li>
+    <li>deco.cfg</li>
+    <li>plonide.cfg</li>
+    <li>metnav.cfg</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="2000" data-y="0">
-       <h1>More Asynchronous service in Plone</h1>
-       <ul>
-       <li>Mail service</li>
-       <li>Transaction cleanup</li>
-       <li>ResT API</li>
-       </ul>
+    <div class="step slide" data-x="-1000" data-y="3000" data-z="0" >
+    <h1>Let me show you</h1>
+    <ul>
+    <li>Easy mode</li>
+    <li>Expert mode</li>
+    </ul>
     </div>
     
-    <div  class="step" data-x="2000" data-y="750">
-       <h1>Switch to Bluebream and ZTK</h1>
-       <p>We are still not ready on this point. Will we be ready for Zope 4?</p>
-    </div>
     
-    <div  class="step" data-x="3000" data-y="-1500">
-       <h1>Plone</h1>
-       <p>First: should we keep CMF or push it in the ZTK?</p>
+    <div class="step slide" data-x="0" data-y="2250" data-z="0" >
+    <q>What next?</q>
+    <ul>
+    <li>Take it as an example</li>
+    <li>Structure refactoring</li>
+    <li>Go on templeet</li>
+    <li>Have a database for addons KSG</li>
+    </ul>
     </div>
-    
-    <div  class="step" data-x="3000" data-y="-750">
-       <h1>Plone</h1>
-       <p>Which visual editor should we use?</p>
-       <ul>
-       <li>TinyMCE</li>
-       <li>FCKeditor</li>
-       <li>Aloah</li>
-       <li>VIE and Create.js</li>
-    </div>
-    
-    <div  class="step" data-x="3000" data-y="0">
-       <h1>Plone</h1>
-       <p>Use dexterity and migrate all products for Plone 4.3.</p>
-    </div>
-    
-    <div  class="step" data-x="3000" data-y="750">
-       <h1>Plone</h1>
-       <p>Have some File format integration.</p>
-       <p>Plone should be able to create document from its internal format:</p>
-       <ul>
-       <li>Open Document</li>
-       <li>PDF</li>
-       <li>MindMapping</li>
-       <li>Impress.js</li>
-       </ul>
-    </div>
-    
-    <div  class="step" data-x="3000" data-y="1500">
-       <q>Can we talk semantics?</q>
-       <p>What about Schema.org?</p>
-       <p>How can we include microformat in a Plone site?</p>
-    </div>
-    
-    <div  class="step" data-x="3000" data-y="2250">
-       <q>Can we talk semantics?</q>
-       <p>We don't have a Python library to discuss with Restful service (for example Stanbol).</p>
-       <p>Did somebody work with Virtuoso?</p>
-    </div>
-       
 
     <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
         <p>Want to use impress.js?</p>
