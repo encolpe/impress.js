@@ -60,6 +60,9 @@ body {
 ol, ul {
     list-style: none;
 }
+li {
+    padding: 1em 0;
+}
 blockquote, q {
     quotes: none;
 }
@@ -293,6 +296,15 @@ a:focus {
 
 #title .footnote {
     font-size: 32px;
+}
+
+pre {
+    display: block;
+    font-family: Noto Sans;
+    font-size: 24px;
+    padding: 1em;
+    background-color: black;
+    color: white;
 }
 
 /*

@@ -74,20 +74,19 @@
     </div>
     
     <div class="step slide" data-x="0" data-y="-500">
-        <q>Docker Engine</q>
+        <q>Docker Engine 1.2</q>
         <ul>
           <li>Un seul fichier DockerFile</li>
         </ul>
     </div>
     
-    <div class="step slide" data-x="0" data-y="500">
+    <div class="step slide" data-x="0" data-y="1500">
         <q>Docker Compose</q>
         <ul>
           <li>Construction de plusieurs conteneurs</li>
         </ul>
     </div>
-    
-    <div class="step slide" data-x="0" data-y="1500">
+    <div class="step slide" data-x="0" data-y="2500">
         <q>Orchestration</q>
         <ul>
           <li>Couche propriétaire</li>
@@ -105,18 +104,55 @@
     <div class="step slide" data-x="1000" data-y="-1000">
         <q>DockerFile</q>
         <ul>
+          <li><pre>
+FROM python:3.5-onbuild
+MAINTAINER Encolpe DEGOUTE <encolpe@colpi.org>
+
+#ARG build_number
+#ARG app_tag
+
+ENV PYTHONUNBUFFERED 1
+          </pre></li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="1000" data-y="500">
+        <q>Docker Engine 2/2</q>
+        <ul>
+          <li>Une commande pour les construire tous</li>
+          <li><pre>
+docker build
+docker start
+          </pre></li>
         </ul>
     </div>
     
     <div class="step slide" data-x="1000" data-y="0">
         <q>docker-compose.yml et development.yml</q>
         <ul>
+        <li>Le dévelppement étend la production
+        <pre>
+# Start Development
+    environment:
+      - DEBUG=true
+    volumes:
+      - ./web:/usr/src/app
+      - /usr/src/app/static
+# End Development
+        </pre>
+        </li>
+        
         </ul>
     </div>
     
     <div class="step slide" data-x="1000" data-y="1000">
         <q>Construction</q>
         <ul>
+        <li><pre>
+docker-compose -t development.yml build
+docker-compose -t development.yml up -d
+docker-compose -t development.yml exec web /usr/local/bin/python manage.py migrate
+        </pre></li>
         </ul>
     </div>
     
@@ -129,22 +165,49 @@
         </ul>
     </div>
     
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div class="step slide" data-x="2000" data-y="-2000">
         <q>Les emmerdes d'installation</q>
         <ul>
+        <li>docker.io ou docker-engine</li>
+        <li>Tiens, le daemon docker ne répond plus !</li>
+        <li>Au fait, qu'est-qu'il installe comme dépendances ?</li>
         </ul>
     </div>
     
-    <div class="step slide" data-x="2000" data-y="-1500">
+    <div class="step slide" data-x="2000" data-y="-1000">
+        <q>Ça fonctionne !</q>
+        <ul>
+        <li>Il suffit d'éditer le dossier web pour dévlopper</li>
+        <li>Possibilité d'utiliser <code>git submodule</code></li>
+        <li>Facile d'agir dans le conteneur avec <code>docker-compose exec</code></li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="2000" data-y="0">
         <q>Les emmerdes de développement</q>
         <ul>
+        <li>extends, ça fontionne ?</li>
+        <li>Tiens, le daemon docker ne répond plus</li>
+        <li>Bon sang, cette option fonctionne pour quelle version du fichier de conf ?</li>
+        <li>Euh, est-ce que ma dernière modificatio est bien prise en compte ?</li>
         </ul>
     </div>
     
-    <div class="step slide" data-x="2000" data-y="-1500">
-        <q>Les questions</q>
+    <div class="step slide" data-x="2000" data-y="1000">
+        <q>Les réseaux privés</q>
+        <ul>
+        <li>Possibilité pour chaque compose d'être dans un sous-réseau particulier</li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="2000" data-y="2000">
+        <q>Des questions ?</q>
         <ul>
         </ul>
+    </div>
+    
+    
+    <div id="overview" class="step" data-x="1500" data-y="0" data-scale="6">
     </div>
      
     <!--div class="step slide" data-x="0" data-y="0" data-rotate="180" data-scale="500">
@@ -152,12 +215,6 @@
         <ul>
         </ul>
     </div-->
-    
-    
-    
-    
-    <div id="overview" class="step" data-x="1500" data-y="0" data-scale="6">
-    </div>
 
 </div>
 <div class="hint">
