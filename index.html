@@ -64,7 +64,7 @@
         </ul>
     </div>
     
-    <div class="step slide" data-x="0" data-y="-1500">
+    <div class="step slide" data-x="-1000" data-y="1500">
         <q>Pourquoi Docker</q>
         <ul>
           <li>Déjà testé : zc.buildout, lxc, VirtualBox</li>
@@ -73,35 +73,43 @@
         </ul>
     </div>
     
-    <div class="step slide" data-x="0" data-y="-500">
-        <q>Docker Engine 1.2</q>
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>Docker Engine</q>
         <ul>
-          <li>Un seul fichier DockerFile</li>
+          <li>Un seul fichier DockerFile en YAML</li>
+          <li>Possibilité de démarrer avec un OS déjà pré-configuré</li>
+          <li>Possibilité de partir avec un OS vide, d'installer des dépendances et de spéciliser une configuration</li>
+          <li>Possibilité de sauver une image déjà construite prête à l'emploi</li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="0" data-y="-500">
+        <q>Docker Compose</q>
+        <ul>
+          <li>Construction de plusieurs conteneurs au sein d'une unité</li>
+          <li>Possibilité de liéer profondémment certains services</li>
+          <li>Partage de paramètre</li>
+        </ul>
+    </div>
+    
+    <div class="step slide" data-x="0" data-y="500">
+        <q>Orchestration</q>
+        <ul>
+          <li>Couche propriétaire pour le moment</li>
+          <li>Va dépendre des solution d'hébergement</li>
         </ul>
     </div>
     
     <div class="step slide" data-x="0" data-y="1500">
-        <q>Docker Compose</q>
+        <q>Implémentation</q>
         <ul>
-          <li>Construction de plusieurs conteneurs</li>
-        </ul>
-    </div>
-    <div class="step slide" data-x="0" data-y="2500">
-        <q>Orchestration</q>
-        <ul>
-          <li>Couche propriétaire</li>
+          <li>Origine : <a href="https://realpython.com/blog/python/django-development-with-docker-compose-and-machine">https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/</a></li>
+          <li>Code de la présentation : <a href="https://github.com/encolpe/dockerizing-django">https://github.com/encolpe/dockerizing-django</a></li>
+          <li>Présentation : <a href="https://github.com/encolpe/impress.js/tree/docker-python">https://github.com/encolpe/impress.js/tree/docker-python</a></li>
         </ul>
     </div>
     
     <div class="step slide" data-x="1000" data-y="-2000">
-        <q>Implémentation</q>
-        <ul>
-          <li>Origine : https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/</li>
-          <li>Code de la présentation : https://github.com/encolpe/dockerizing-django</li>
-        </ul>
-    </div>
-    
-    <div class="step slide" data-x="1000" data-y="-1000">
         <q>DockerFile</q>
         <ul>
           <li><pre>
@@ -116,7 +124,7 @@ ENV PYTHONUNBUFFERED 1
         </ul>
     </div>
     
-    <div class="step slide" data-x="1000" data-y="500">
+    <div class="step slide" data-x="1000" data-y="-1000">
         <q>Docker Engine 2/2</q>
         <ul>
           <li>Une commande pour les construire tous</li>
@@ -138,8 +146,7 @@ docker start
     volumes:
       - ./web:/usr/src/app
       - /usr/src/app/static
-# End Development
-        </pre>
+# End Development</pre>
         </li>
         
         </ul>
@@ -151,7 +158,8 @@ docker start
         <li><pre>
 docker-compose -t development.yml build
 docker-compose -t development.yml up -d
-docker-compose -t development.yml exec web /usr/local/bin/python manage.py migrate
+docker-compose -t development.yml exec web \
+     /usr/local/bin/python manage.py migrate
         </pre></li>
         </ul>
     </div>
